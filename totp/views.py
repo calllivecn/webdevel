@@ -6,8 +6,8 @@ from django.http import HttpResponse, Http404
 
 
 
-async def index(req):
-#def index(req):
+#async def index(req):
+def index(req):
     return HttpResponse("Hello 你好!")
 
 
