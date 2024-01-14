@@ -1,3 +1,8 @@
 db.sqlite3
 __pycache__/
 uwsgi-run/
+
+*.log
+*.logs
+*.txt
+
