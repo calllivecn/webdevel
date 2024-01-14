@@ -2,17 +2,28 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from django.http import HttpResponse, Http404
+from django.http import (
+    HttpResponse,
+    Http404,
+    HttpResponseServerError,
+    JsonResponse,
+)
 
 
 
-#async def index(req):
 def index(req):
-    return HttpResponse("Hello 你好!")
+    return HttpResponse("<h1>Hello 你好!</h1>")
 
+async def aindex(req):
+    return HttpResponse("<h1>Hello 你好!</h1>")
 
+def json(req):
+    return JsonResponse(req.headers)
+
+def err500(req):
+    return HttpResponseServerError("内部错误")
 
 
 def err404(req):
-    return Http404("not found")
+    raise Http404("not found")
 

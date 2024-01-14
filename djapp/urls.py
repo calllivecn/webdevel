@@ -17,10 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.http import HttpResponse
+
+def favicon(req):
+    res = HttpResponse()
+    res.status_code = 404
+    res['Cache-Control'] = 'max-age=86400'
+    return res
+
 urlpatterns = [
 
     path('totp/', include("totp.urls")),
     #path("__debug__/", include("debug_toolbar.urls")),
+    path('favicon.ico/', favicon),
 
     #path('admin/', admin.site.urls),
 ]

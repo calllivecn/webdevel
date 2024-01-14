@@ -9,5 +9,10 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("a/", views.index, name="aindex"),
+    path("json/", views.json),
+    path("404/", views.err404),
+    path("500/", views.err500),
+
 ]
 
