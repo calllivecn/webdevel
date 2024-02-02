@@ -1,4 +1,6 @@
 db.sqlite3
+
+depend-cache/
 __pycache__/
 uwsgi-run/
 
