@@ -28,7 +28,8 @@ clean(){
 trap clean SIGINT SIGTERM EXIT ERR
 
 cp -v app1.py "${TMP}/"
-cp -v server-uvicorn.py "${TMP}/__main__.py"
+#cp -v server-uvicorn.py "${TMP}/__main__.py"
+cp -v "${TMP}/bin/uvicorn" "${TMP}/__main__.py"
 
 python -m zipapp --python '/usr/bin/env python' --compress --output flask-uvicorn.pyz "${TMP}" 
 

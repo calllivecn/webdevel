@@ -8,3 +8,5 @@ uwsgi-run/
 *.logs
 *.txt
 
+*.pyz
+
