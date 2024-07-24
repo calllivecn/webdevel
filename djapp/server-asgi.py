@@ -9,6 +9,6 @@ headers = [
     ("Server", "nginx"),
 ]
 
-#uvicorn.run("djapp.asgi:application", host="10.1.3.1", port=8001, log_level="info")
-uvicorn.run("djapp.asgi:application", host="10.1.3.1", port=8001, headers=headers, log_level="info") # , reload=True) # 怎么报错？。。。
+#uvicorn.run("djapp.asgi:application", host="::", port=8001, log_level="info")
+uvicorn.run("djapp.asgi:application", host="::", port=8001, headers=headers, log_level="info") # , reload=True) # 怎么报错？。。。
 

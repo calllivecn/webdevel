@@ -9,6 +9,6 @@ headers = [
     ("Server", "nginx"),
 ]
 
-uvicorn.run("01-fastapi:app", host="10.1.3.1", port=8000, headers=headers, log_level="info") # , reload=True) # 怎么报错？。。。
-#uvicorn.run("01-fastapi:app", host="10.1.3.1", port=8000, headers=headers, log_level="warning")
+uvicorn.run("01-fastapi:app", host="::", port=8000, headers=headers, log_level="info") # , reload=True) # 怎么报错？。。。
+#uvicorn.run("01-fastapi:app", host="::", port=8000, headers=headers, log_level="warning")
 

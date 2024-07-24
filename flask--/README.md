@@ -1,4 +1,15 @@
-# Gunicorn + flask 
+# uvicorn + flask 
 
-- 默认情况下，将从运行gunicorn 的同一目录中读取名为 gunicorn.conf.py 的文件。
+- 需要安装 asgiref
+
+- 在代码中使用
+
+```python
+from asgiref.wsgi import WsgiToAsgi
+
+app = Flask("appname")
+...
+
+asgi_app = WsgiToAsgi(app)
+```
 

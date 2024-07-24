@@ -1,5 +1,5 @@
 Django==5.0.1
 django-debug-toolbar==4.2.0
-fastapi==0.109.0
-uvicorn[standard]==0.25.0
-uWSGI==2.0.23
+fastapi==0.111.0
+uvicorn[standard]==0.30.3
+#uWSGI==2.0.23
