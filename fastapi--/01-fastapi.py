@@ -35,8 +35,8 @@ app = FastAPI()
 
 @app.get("/favicon.ico")
 async def icon():
-
-    return {"message": "Hello World"}
+    #return {"message": "Hello World"}
+    raise HTTPException(status_code=404, detail="not found")
 
 @app.get("/")
 async def root():
